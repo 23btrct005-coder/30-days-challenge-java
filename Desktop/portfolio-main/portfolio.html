@@ -391,14 +391,17 @@ if(mobileToggle){
 }
 
 /* -------------- Skill bars animation -------------- */
-window.addEventListener('load', ()=>{
-  document.querySelectorAll('.skill-bar').forEach(b=>{
+window.addEventListener('load', () => {
+  document.querySelectorAll('.skill-bar').forEach(b => {
     const w = b.getAttribute('data-width') || '60%';
-    setTimeout(()=> b.style.transition = "width 1.5s ease-in-out";
-b.style.width = w;
+
+    setTimeout(() => {
+      b.style.transition = "width 1.5s ease-in-out";
+      b.style.width = w;
+    }, 300);
+
   });
 });
-
 /* -------------- Contact submit (simulated) -------------- */
 function handleContact(e){
   e.preventDefault();
